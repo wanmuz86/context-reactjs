@@ -8,9 +8,9 @@ export default function List() {
     <div>
         <h2>To do List</h2>
         {
-          state.todos.map(todo=>(
+          state.todos.map((todo : {'id':string, 'name':string})=>(
             <li key={todo.id}>
-              {todo.text}
+              {todo.name}
             </li>
           )
           )

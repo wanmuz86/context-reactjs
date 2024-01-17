@@ -46,6 +46,7 @@ const TodoProvider = ({ children }) => {
         </TodoContext.Provider>
     );
 }
+
 // A custom hook that will be used by component in case they want to access the state, and dispatch method
 const useTodo = () => {
     const context = useContext(TodoContext);
