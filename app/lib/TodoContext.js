@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import { createContext,useReducer,useContext } from 'react';
 
 // Is the group of components that will share the variable or declared inside this file
 const TodoContext = createContext();
@@ -39,7 +39,7 @@ const TodoProvider = ({ children }) => {
     //{children}
 // Using useReducer, I will combine this two and it is accesible through <TodoContext.Provider> component
 // state -> to get the state , and dispatch -> to get the method
-    const { state, dispatch } = useReducer(todoReducer, initialState);
+    const [ state, dispatch ] = useReducer(todoReducer, initialState);
     return (
         <TodoContext.Provider value={{ state, dispatch }}>
             {children}
@@ -49,7 +49,7 @@ const TodoProvider = ({ children }) => {
 // A custom hook that will be used by component in case they want to access the state, and dispatch method
 const useTodo = () => {
     const context = useContext(TodoContext);
-    if (!contentext) {
+    if (!context) {
         throw new Error('useTodo must be used with a TodoProvider')
     }
     return context
