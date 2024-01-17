@@ -10,7 +10,6 @@ export default function List() {
         {
           state.todos.map((todo : {'id':string, 'name':string})=>(
             <li key={todo.id}>
-            
               <Row todo={todo}/>
             </li>
           )
