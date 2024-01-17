@@ -11,6 +11,7 @@ export default function List() {
           state.todos.map((todo : {'id':string, 'name':string})=>(
             <li key={todo.id}>
               {todo.name}
+              <Row/>
             </li>
           )
           )
