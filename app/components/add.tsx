@@ -12,7 +12,7 @@ export default function Add() {
     }
     const handleSubmit = (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        const newTodo = {'id':Date.now(),name:todo};
+        const newTodo = {id:Date.now(),name:todo};
         dispatch({type:'ADD_TODO', payload:newTodo})
         setTodo('')
         console.log(todo);

@@ -1,9 +1,13 @@
 import React from 'react'
 
-export default function Row() {
+interface RowProp {
+  todo: {id:string, name:string}
+}
+
+const Row:React.FC<RowProp>({todo}) {
   return (
     <div>
-        <h3>Item name</h3>
+        <h3>{todo.name}</h3>
         <button>Remove</button>
     </div>
   )
