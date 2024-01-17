@@ -9,9 +9,8 @@ export default function List() {
         <h2>To do List</h2>
         {
           state.todos.map((todo : {'id':string, 'name':string})=>(
-            <li key={todo.id}>
-              <Row todo={todo}/>
-            </li>
+            
+              <Row todo={todo} key={todo.id}/>
           )
           )
         }

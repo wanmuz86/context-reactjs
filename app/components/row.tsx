@@ -15,10 +15,11 @@ const Row:React.FC<RowProp> = ({todo}) => {
 
 
   return (
-    <div>
+      <li key={todo.id}>
         <h3>{todo.name}</h3>
         <button onClick={handleClick}>Remove</button>
-    </div>
+      </li>
+
   )
 }
 export default Row;
