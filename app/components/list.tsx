@@ -10,17 +10,13 @@ export default function List() {
         {
           state.todos.map((todo : {'id':string, 'name':string})=>(
             <li key={todo.id}>
-              {todo.name}
-              <Row/>
+            
+              <Row todo={todo}/>
             </li>
           )
           )
         }
-        {/* <ul>
-            <li><Row/></li>
-            <li><Row/></li>
-            <li><Row/></li>
-        </ul> */}
+       
     </div>
   )
 }

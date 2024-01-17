@@ -4,7 +4,7 @@ interface RowProp {
   todo: {id:string, name:string}
 }
 
-const Row:React.FC<RowProp>({todo}) {
+const Row:React.FC<RowProp> = ({todo}) => {
   return (
     <div>
         <h3>{todo.name}</h3>
@@ -12,3 +12,4 @@ const Row:React.FC<RowProp>({todo}) {
     </div>
   )
 }
+export default Row;
